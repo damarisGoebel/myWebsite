@@ -1,0 +1,15 @@
+.header > nav {
+    display:flex;
+    justify-content: flex-end;
+}
+
+.navList > a {
+    padding-left: 20px;
+}
+
+.header {
+    margin-bottom: 30px;
+}
+
+
+
