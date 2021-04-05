@@ -1,0 +1,48 @@
+.about {
+    display:grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+}
+
+.image {
+    margin-top:20px;
+    padding-left: 20px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.imageContainer {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .about {
+        display:grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    .image {
+        margin-top:20px;
+        width: 100%;
+        object-fit: cover;
+        padding-left: 0;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .about {
+        display:grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    
+    }
+
+    .image {
+        margin-top:20px;
+        width: 100%;
+        object-fit: cover;
+        padding-left:0;
+    }
+}
+
