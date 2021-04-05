@@ -20,7 +20,7 @@ const PlaygroundPage = () => {
     <h4>But before we get started...press this button </h4>
 
     <button className={styles.button} onClick={buttonClick}>
-      Magic happens soon
+      Magic
       </button>
 
       {showConfetti && <Confetti
