@@ -22,3 +22,12 @@
 
 }
 
+@media only screen and (min-width: 992px) {
+  .cardRow {
+    display:flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+  }
+}
+
+
