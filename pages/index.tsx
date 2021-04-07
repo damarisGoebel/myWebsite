@@ -5,7 +5,7 @@ import Cards from '../components/Cards/Cards'
 
 export default function Home() {
   return (
-    <Layout title="DAMARIS GÖBEL - Web Development">
+    <Layout title="Damaris Göbel - Web Development">
       <section className={styles.cardRow}>
       <Cards 
       title={"Hello Cook"}

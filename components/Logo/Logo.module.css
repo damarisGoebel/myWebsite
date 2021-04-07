@@ -1,4 +1,117 @@
 .logo {
     font-size: 25px;
     float: left;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+.mobile {
+    display:none;
+}
+
+.desktop {
+   display:flex;
+   flex-direction: row;
+    /* animation: color-change 8s infinite; */
+  }
+
+  .desktop > span {
+      font-size: 18px;
+      line-height: normal;
+  }
+
+  .firstWord {
+    background: linear-gradient(90deg, #007CF0, #00DFD8);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    position:absolute;
+    top:20px;
+  }
+
+  .firstWord:hover, .secondWord:hover, .thirdWord:hover {
+    background: linear-gradient(90deg, black,black);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+
+
+
+  .secondWord {
+    background: linear-gradient(90deg, #7928CA, #FF0080);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    top:40px;
+     
+  }
+
+  .thirdWord {
+    background: linear-gradient(90deg, #FF4D4D, #F9CB28);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    top:60px;
+  }
+
+
+
+
+@media only screen and (max-width: 600px) {
+ .mobile {
+     display:block;
+ }
+
+ .desktop {
+     display:none;
+ }
+}
+
+@media only screen and (min-width: 600px) {
+    .mobile {
+        display:block;
+    }
+   
+    .desktop {
+        display:none;
+    }
+
+}
+
+@media only screen and (min-width: 768px) {
+    .mobile {
+        display:none;
+    }
+   
+    .desktop {
+        display:block;
+    }
+}
+
+
+
+@media only screen and (min-width: 992px) {
+    .mobile {
+        display:none;
+        
+    }
+   
+    .desktop {
+        display:block;
+        display:flex;
+        flex-direction: column;
+
+    }
+
 }
