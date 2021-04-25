@@ -65,9 +65,9 @@ const PlaygroundPage = ({data}) => {
           <a target="_blank" href={post.link}>
             <ul key={index} className={styles.post}>
               <li className={styles.postItem}>
-            <img src={post.thumbnail} className={styles.postImg}/>
             <div className={styles.content}>
             <h1>{post.title}</h1>
+            <img src={post.thumbnail} className={styles.postImg}/>
             <p>{'...'+ shortenText(toText(post.content), 100, 600)+ '...'}</p>
             </div>
             <button className={styles.button}>Read more</button>
