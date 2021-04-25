@@ -2,13 +2,10 @@
   "name": "mywebsite",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://damarisgoebel.github.io/mywebsite",
-  "scripts": {
+    "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "start": "next start"
   },
   "dependencies": {
     "clsx": "^1.1.1",
