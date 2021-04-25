@@ -1,10 +1,23 @@
 import React from 'react'
-import Link from 'next/link'
 import Layout from '../components/Layout/Layout'
 import Confetti from 'react-confetti'
 import styles from '../styles/Playground.module.css'
 
-const PlaygroundPage = () => {
+
+export async function getServerSideProps() {
+  const res = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@damaris.goebel')
+  const data = await res.json()
+
+  return {
+    props: {data}
+  }
+}
+
+
+
+const PlaygroundPage = ({data}) => {
+
+  let posts = data.items
 
   const [showConfetti, setShowConfetti] = React.useState(false)
 
@@ -12,30 +25,61 @@ const PlaygroundPage = () => {
     setShowConfetti(!showConfetti)
   }
 
+  function toText(node) {
+   let newNode = node.replace(/(<([^>]+)>)/gi, "");
+   return newNode
+ }
+
+  function shortenText(text,startingPoint ,maxLength) {
+  return text.length > maxLength?
+     text.slice(startingPoint, maxLength):
+     text
+ }
+
   return (
   <Layout title="Playground - Blog">
     <h3>This will be my playground</h3>
-    <p>I will post my learnings, my worth-to-write-down knowledge and a library for my brain to look up things. </p>
+    <p>I will post my learnings, my worth-to-write-down and useful-to-remember knowledge and it will be my personal library to look up things. </p>
 
-    <h4>But before we get started...press this button </h4>
-
+    <p>But before we get started...press this button </p>
     <button className={styles.button} onClick={buttonClick}>
-      Magic
+      Magic will happen :) 
       </button>
 
       {showConfetti && <Confetti
-      colors={['#FFE4e1',
-      '#FFDAB9',
-      '#98FB98',
-      '#F0FFFF',
-      '#b0E0E6',
-      '#b0C4de',
-      '#D8BFD8',
-      '#FFb6C1'
-      ]}
+      colors={['#007CF0',
+      '#00DFD8',
+      '#7928CA',
+      '#FF0080',
+      '#FF4D4D',
+      '#F9CB28'     ]}
       />}
 
-      <h3>Blog is coming</h3>
+<div className={styles.blogHeader}>
+    <h3>My Medium posts</h3>
+  </div>
+  <section className={styles.blog}>
+
+      {posts.map((post, index) => {
+        return (
+          <a target="_blank" href={post.link}>
+            <ul key={index} className={styles.post}>
+              <li className={styles.postItem}>
+            <img src={post.thumbnail} className={styles.postImg}/>
+            <div className={styles.content}>
+            <h1>{post.title}</h1>
+            <p>{'...'+ shortenText(toText(post.content), 100, 600)+ '...'}</p>
+            </div>
+            <button className={styles.button}>Read more</button>
+            </li>
+            </ul>
+          </a>
+
+        )
+      })
+      }
+      </section>
+
   </Layout>
 )
 }

@@ -1,6 +1,35 @@
+
+
 .button {
     padding: 10px 30px;
     border: none;
     background-color: lightgreen;
     outline:none;
 }
+
+
+.blog{
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    overflow:hidden;
+}
+
+.post {
+    list-style: none;
+    padding:0;
+ }
+
+.postImg {
+     max-width: 50%;
+ }
+
+ .blogHeader {
+     padding-top: 26px;
+ }
+
+ @media only screen and (max-width: 768px) {
+    .blog {
+        max-width: 100%;
+    }
+ }
