@@ -26,7 +26,8 @@ const PlaygroundPage = ({data}) => {
   }
 
   function toText(node) {
-   let newNode = node.replace(/(<([^>]+)>)/gi, "");
+   let mainText = node.slice(node.indexOf('<p>'))
+   let newNode = mainText.replace(/(<([^>]+)>)/gi, "");
    return newNode
  }
 
@@ -62,13 +63,13 @@ const PlaygroundPage = ({data}) => {
 
       {posts.map((post, index) => {
         return (
-          <a target="_blank" href={post.link}>
-            <ul key={index} className={styles.post}>
+          <a target="_blank" href={post.link} key={index}>
+            <ul className={styles.post}>
               <li className={styles.postItem}>
             <div className={styles.content}>
             <h1>{post.title}</h1>
-            <img src={post.thumbnail} className={styles.postImg}/>
-            <p>{'...'+ shortenText(toText(post.content), 100, 600)+ '...'}</p>
+            {!post.thumbnail.includes('https://medium.com/_/stat') && <img src={post.thumbnail} className={styles.postImg}/>}
+            <p>{shortenText(toText(post.content), 0, 600)+ '...'}</p>
             </div>
             <button className={styles.button}>Read more</button>
             </li>
