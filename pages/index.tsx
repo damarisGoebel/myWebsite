@@ -9,7 +9,7 @@ export default function Home() {
       <section className={styles.cardRow}>
       <Cards 
       title={"Hello Cook"}
-      subTitle={"- Rezeptesammlung, mein digitales Kochbuch."}
+      subTitle={"- recipe collection, my digital cookbook."}
       techStack={"Node.js, MongoDB, Express.js, Handlebars.js, Passport.js, Bootstrap"}
       imageSrc={"/helloCook.png"}
       imageAlt={"helloCookScreenshot"}
@@ -18,7 +18,7 @@ export default function Home() {
       />
              <Cards 
       title={"JavaScript Quiz"}
-      subTitle={"- Responsive 25-Fragen mit Erfolgsmessung und Nutzerfeedback."}
+      subTitle={"- responsive 25 questions with success valuation and user feedback."}
       techStack={"vanilla JavaScript "}
       imageSrc={"/javascriptQuiz.png"}
       imageAlt={"javascriptQuizScreenshot"}
@@ -31,7 +31,7 @@ export default function Home() {
       <section className={styles.cardRow}>
       <Cards 
       title={"Give Joy Cards"}
-      subTitle={"- handgezeichnete Karten"}
+      subTitle={"- handmade cards"}
       techStack={"React.js"}
       imageSrc={"/giveJoyCards.png"}
       imageAlt={"giveJoyCardsScreenshot"}
@@ -43,7 +43,7 @@ export default function Home() {
       title={"My website"}
       subTitle={"- damarisgoebel.com"}
       techStack={"Next.js, TypeScript"}
-      deployment={"AWS"}
+      deployment={"Netlify"}
       />
  
  

@@ -23,7 +23,7 @@ const Cards:React.FC<Props> = ({title, subTitle, imageSrc, imageAlt, techStack, 
                         <br/>
                     Deployment:  
                         <span>                
-                            <a href={deploymentLink}>
+                            <a href={deploymentLink} className={styles.link}>
                                 {deployment}                  
                             </a>
                         </span>
