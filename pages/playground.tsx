@@ -4,7 +4,7 @@ import Confetti from 'react-confetti'
 import styles from '../styles/Playground.module.css'
 
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const res = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@damaris.goebel')
   const data = await res.json()
 
