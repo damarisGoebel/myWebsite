@@ -21,6 +21,7 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
     <header className={styles.header}>
         <Logo/>
       <nav className={styles.navList}>
+            <Link href="/projects"><a>Projects</a></Link>
             <Link href="/playground"><a>Playground</a></Link>
             <Link href="/about"><a>About</a></Link>
       </nav>

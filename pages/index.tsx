@@ -1,53 +1,26 @@
-import Link from 'next/link'
-import styles from '../styles/Home.module.css'
 import Layout from '../components/Layout/Layout'
-import Cards from '../components/Cards/Cards'
+import styles from '../styles/Home.module.css'
 
-export default function Home() {
-  return (
-    <Layout title="Damaris Göbel - Web Development">
-      <section className={styles.cardRow}>
-      <Cards 
-      title={"Hello Cook"}
-      subTitle={"- recipe collection, my digital cookbook."}
-      techStack={"Node.js, MongoDB, Express.js, Handlebars.js, Passport.js, Bootstrap"}
-      imageSrc={"/helloCook.png"}
-      imageAlt={"helloCookScreenshot"}
-      deployment={"Heroku"}
-      deploymentLink={"https://recipe-app-dg.herokuapp.com/"}
-      />
-             <Cards 
-      title={"JavaScript Quiz"}
-      subTitle={"- responsive 25 questions with success valuation and user feedback."}
-      techStack={"vanilla JavaScript "}
-      imageSrc={"/javascriptQuiz.png"}
-      imageAlt={"javascriptQuizScreenshot"}
-      deployment={"Netlify"}
-      deploymentLink={"https://boring-shockley-2307f5.netlify.app/"}
-      />
- 
-      </section>
+const Home = () => {
 
-      <section className={styles.cardRow}>
-      <Cards 
-      title={"Give Joy Cards"}
-      subTitle={"- handmade cards"}
-      techStack={"React.js"}
-      imageSrc={"/giveJoyCards.png"}
-      imageAlt={"giveJoyCardsScreenshot"}
-      deployment={"GitHub Pages"}
-      deploymentLink={"https://damarisgoebel.github.io/give-joy-cards/"}
-      />
+    const current = new Date()
+    const time = current.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})
 
-    <Cards 
-      title={"My website"}
-      subTitle={"- damarisgoebel.com"}
-      techStack={"Next.js, TypeScript"}
-      deployment={"Netlify"}
-      />
- 
- 
-      </section>
-    </Layout>
-  )
-}
+    const mantras = ['Find your calm', 'You can do this', 'I am stronger than I think', 'Love the life you have', 'You got this', 'Everything happens right on schedule.', 'Remember who you are.', 'It will get done.', 'Nothing lasts forever. Not the good, and not the bad.', 'You are a smart, powerful human. You’ve got this.', 'Inhale, exhale.','Whatever you’re feeling is OK.']
+    
+
+    return(
+  <Layout title="Quotes">
+    <div className={styles.quotes}>
+            <h1 className={styles.time}>{time}</h1>
+            <h1 className={styles.mantra}>{mantras[Math.floor(Math.random() * mantras.length)]}, beautiful. </h1>
+
+            <section className={styles.quote}>
+              <p className={styles.theQuote}>“There is virtue in work and there is virtue in rest. Use both and overlook neither.”</p>
+              <p className={styles.theAuthor}>Alan Cohen</p>
+              </section>
+    </div>
+  </Layout>
+)}
+
+export default Home
