@@ -40,7 +40,7 @@ const AboutPage = () => (
           <img className={styles.image} src="/me.jpg" alt="damarisGoebel"/>
         </div>
     </section>
-    <p> Here is a list of technologies I work with and started to love-hate: 
+    <p> Here is a list of technologies I work with and started to love: 
 </p>
 <TechList />
   </Layout>
