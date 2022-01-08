@@ -4,7 +4,7 @@
     justify-content: center;
     align-content: center;
     align-items: center;
-    color: white;
+    color: #FAF1DB;
     flex-direction: column;
     position: relative;
 }
@@ -12,6 +12,7 @@
 .time {
     font-size: 150px;
     padding: 0 25px;
+    color: #FAF1DB;
 }
 
 .mantra {
@@ -19,6 +20,7 @@
     line-height: normal;
     padding: 0 25px;
     text-align:center;
+    color: #FAF1DB;
 }
 
 .quote {
@@ -26,10 +28,13 @@
     bottom:0;
     padding: 0 25px 25px 25px;
     text-align:center;
+    color: #FAF1DB;
 }
 
 .theQuote {
     margin: 0 auto;
+    color: #FAF1DB;
+    font-size: 1.2rem;
 }
 
 .theAuthor {
@@ -42,5 +47,9 @@
     }
     .mantra {
         font-size: 28px;
+    }
+
+    .theQuote {
+        font-size: 1rem;
     }
 }

@@ -5,10 +5,10 @@
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 5px 0 rgb(64 60 67 / 16%);
+    background-color: white;
 
 }
 .description {
-    color: rgba(117, 117, 117, 1);
     font-size: 16px;
 
 }

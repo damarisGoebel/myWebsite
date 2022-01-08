@@ -17,7 +17,7 @@
 
 .post {
   list-style: none;
-  /* padding: 0; */
+  background-color: white;
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 0 5px 0 rgb(64 60 67 / 16%);
