@@ -15,8 +15,8 @@ export default function Projects() {
           }
           imageSrc={'/helloCook.png'}
           imageAlt={'helloCookScreenshot'}
-          deployment={'Heroku'}
-          deploymentLink={'https://recipe-app-dg.herokuapp.com/'}
+          deployment={'Render'}
+          deploymentLink={'https://recipes-fxeh.onrender.com/'}
         />
         <Cards
           title={'JavaScript Quiz'}
